@@ -1,0 +1,1 @@
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\TestClient\bin\Debug\TestClient.exe.config

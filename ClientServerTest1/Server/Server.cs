@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Server
 {
-    public class Class1
+    class Server
     {
+        public void Start()
+        {
+
+        }
     }
 }

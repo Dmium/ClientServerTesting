@@ -1,1 +1,2 @@
 C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\TestClient\bin\Debug\TestClient.exe.config
+C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\TestClient\bin\Debug\TestClient.exe.config

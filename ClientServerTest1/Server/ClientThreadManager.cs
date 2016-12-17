@@ -14,6 +14,7 @@ namespace Server
         TcpClient Client;
         Thread Listener;
         NetworkStream Stream;
+        byte[] data;
         public ClientThreadManager(TcpClient Client)
         {
             this.Client = Client;
@@ -28,10 +29,14 @@ namespace Server
                 {
                     try
                     {
+                        data = new byte[2048];
                         Stream = Client.GetStream();
+                        Stream.Read(data, 0, data.Length);
+                        Console.WriteLine(System.Text.Encoding.ASCII.GetString(data));
                     }
-                    catch { }//Test
-                    //Test success
+                    catch (Exception e){
+                        Console.WriteLine("fucked up " + e.Message);
+                    }
                 }
             }
             catch { }

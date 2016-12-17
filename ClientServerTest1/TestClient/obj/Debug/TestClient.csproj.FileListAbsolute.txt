@@ -1,2 +1,9 @@
 C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\TestClient\bin\Debug\TestClient.exe.config
 C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\TestClient\bin\Debug\TestClient.exe.config
+C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\TestClient\bin\Debug\TestClient.exe
+C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\TestClient\bin\Debug\TestClient.pdb
+C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\TestClient\bin\Debug\ClientManager.dll
+C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\TestClient\bin\Debug\ClientManager.pdb
+C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\TestClient\obj\Debug\TestClient.csprojResolveAssemblyReference.cache
+C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\TestClient\obj\Debug\TestClient.exe
+C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\TestClient\obj\Debug\TestClient.pdb

@@ -1,3 +1,10 @@
 c:\users\dm2oo\documents\visual studio 2015\Projects\ClientServerTest1\ClientServerTest1\bin\Debug\ClientServerTest1.exe.config
 C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\bin\Debug\ClientServerTest1.exe.config
 C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\bin\Debug\ClientServerTest1.exe.config
+C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\bin\Debug\ClientServerTest1.exe
+C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\bin\Debug\ClientServerTest1.pdb
+C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\obj\Debug\ClientServerTest1.csprojResolveAssemblyReference.cache
+C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\obj\Debug\ClientServerTest1.exe
+C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\obj\Debug\ClientServerTest1.pdb
+C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\bin\Debug\ServerManager.dll
+C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\bin\Debug\ServerManager.pdb

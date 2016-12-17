@@ -7,13 +7,14 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading;
 
-namespace Server
+namespace ServerManager
 {
-    class ClientThreadManager
+    public class ClientThreadManager
     {
         TcpClient Client;
         Thread Listener;
         NetworkStream Stream;
+        byte[] dataBuffer;
         byte[] data;
         public ClientThreadManager(TcpClient Client)
         {
@@ -23,16 +24,21 @@ namespace Server
         }
         public void ClientListener()
         {
+            Console.WriteLine("shit happened");
             try
             {
                 while (Client.Connected)
                 {
                     try
                     {
-                        data = new byte[2048];
+                        dataBuffer = new byte[2048];
                         Stream = Client.GetStream();
-                        Stream.Read(data, 0, data.Length);
+                        Stream.Read(dataBuffer, 0, dataBuffer.Length);
+                        data = new byte[BitConverter.ToInt32(dataBuffer, 0)];
+                        for (int i = 0; i < data.Length; i++)
+                            data[i] = dataBuffer[i+4];
                         Console.WriteLine(System.Text.Encoding.ASCII.GetString(data));
+                        Console.WriteLine("thing happened");
                     }
                     catch (Exception e){
                         Console.WriteLine("fucked up " + e.Message);

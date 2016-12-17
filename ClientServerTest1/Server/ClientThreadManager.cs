@@ -30,7 +30,7 @@ namespace Server
                     {
                         Stream = Client.GetStream();
                     }
-                    catch { }
+                    catch { }//Test
                 }
             }
             catch { }

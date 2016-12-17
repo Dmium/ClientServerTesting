@@ -24,10 +24,13 @@ namespace Server
         {
             try
             {
-                Stream = Client.GetStream();
                 while (Client.Connected)
                 {
-
+                    try
+                    {
+                        Stream = Client.GetStream();
+                    }
+                    catch { }
                 }
             }
             catch { }

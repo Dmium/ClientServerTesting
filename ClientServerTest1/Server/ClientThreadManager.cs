@@ -41,7 +41,7 @@ namespace ServerManager
                         Console.WriteLine("thing happened");
                     }
                     catch (Exception e){
-                        Console.WriteLine("fucked up " + e.Message);
+                        Console.WriteLine("Fucked up. " + e.Message);
                     }
                 }
             }

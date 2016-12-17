@@ -31,6 +31,7 @@ namespace Server
                         Stream = Client.GetStream();
                     }
                     catch { }//Test
+                    //Test success
                 }
             }
             catch { }

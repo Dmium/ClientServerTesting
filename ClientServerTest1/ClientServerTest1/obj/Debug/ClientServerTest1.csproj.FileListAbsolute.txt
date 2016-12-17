@@ -1,0 +1,2 @@
+c:\users\dm2oo\documents\visual studio 2015\Projects\ClientServerTest1\ClientServerTest1\bin\Debug\ClientServerTest1.exe.config
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\bin\Debug\ClientServerTest1.exe.config

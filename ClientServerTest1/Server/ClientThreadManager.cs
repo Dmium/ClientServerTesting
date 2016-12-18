@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
+using Packets;
+using System.Collections.Concurrent;
 
 namespace ServerManager
 {
@@ -14,10 +16,12 @@ namespace ServerManager
         private TcpClient Client;
         private Thread Listener;
         private NetworkStream Stream;
-
-        public ClientThreadManager(TcpClient Client)
+        public ConcurrentQueue<DecodedPacket> Packets = new ConcurrentQueue<DecodedPacket>();
+        public int ClientID { get; }
+        public ClientThreadManager(TcpClient Client, int ClientID)
         {
             this.Client = Client;
+            this.ClientID = ClientID;
             Listener = new Thread(new ThreadStart(ClientListener));
             Listener.Start();
         }
@@ -26,20 +30,11 @@ namespace ServerManager
             Console.WriteLine("shit happened");
             try
             {
-                byte[] dataBuffer;
-                byte[] data;
                 while (Client.Connected)
                 {
                     try
                     {
-                        dataBuffer = new byte[2048];
-                        Stream = Client.GetStream();
-                        Stream.Read(dataBuffer, 0, dataBuffer.Length);
-                        data = new byte[BitConverter.ToInt32(dataBuffer, 0)];
-                        for (int i = 0; i < data.Length; i++)
-                            data[i] = dataBuffer[i + 4];
-                        Console.WriteLine(System.Text.Encoding.ASCII.GetString(data));
-                        Console.WriteLine("thing happened");
+                        Packets.Enqueue(PacketMethods.PacketToDecodedPacket(Client.GetStream(), ClientID));
                     }
                     catch (Exception e)
                     {

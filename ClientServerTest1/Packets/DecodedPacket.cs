@@ -12,6 +12,10 @@ namespace Packets
     {
         public int ClientID { get; }
         public object obj { get; }
+        public DecodedPacket()
+        {
+
+        }
         public DecodedPacket(int ClientID, object obj)
         {
             this.ClientID = ClientID;

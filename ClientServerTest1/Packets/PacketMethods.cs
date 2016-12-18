@@ -26,11 +26,11 @@ namespace Packets
         //        tempData[i] = data[i];
         //    return tempData;
         //}
-        public static object PacketToObject(NetworkStream Stream)
+        public static DecodedPacket PacketToDecodedPacket(NetworkStream stream, int clientID)
         {
             byte[] dataBuffer = new byte[4194304];
-            Stream.Read(dataBuffer, 0, dataBuffer.Length);
-            return (new BinaryFormatter()).Deserialize(new System.IO.MemoryStream(GetFirstInt(dataBuffer).ByteArray));
+            stream.Read(dataBuffer, 0, dataBuffer.Length);
+            return new DecodedPacket(clientID,(new BinaryFormatter()).Deserialize(new System.IO.MemoryStream(GetFirstInt(dataBuffer).ByteArray)));
         }
         public static byte[] ObjectToByteArray(Object obj)
         {

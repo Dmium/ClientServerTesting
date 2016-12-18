@@ -8,3 +8,10 @@ C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\ClientServer
 C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\obj\Debug\ClientServerTest1.pdb
 C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\bin\Debug\ServerManager.dll
 C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\bin\Debug\ServerManager.pdb
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\obj\Debug\ClientServerTest1.exe
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\obj\Debug\ClientServerTest1.pdb
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\bin\Debug\ClientServerTest1.exe
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\bin\Debug\ClientServerTest1.pdb
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\bin\Debug\ServerManager.dll
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\bin\Debug\ServerManager.pdb
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\obj\Debug\ClientServerTest1.csprojResolveAssemblyReference.cache

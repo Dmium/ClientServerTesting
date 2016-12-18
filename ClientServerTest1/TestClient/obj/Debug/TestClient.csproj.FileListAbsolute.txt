@@ -7,3 +7,5 @@ C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\TestClient\b
 C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\TestClient\obj\Debug\TestClient.csprojResolveAssemblyReference.cache
 C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\TestClient\obj\Debug\TestClient.exe
 C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\TestClient\obj\Debug\TestClient.pdb
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\TestClient\obj\Debug\TestClient.exe
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\TestClient\obj\Debug\TestClient.pdb

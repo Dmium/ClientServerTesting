@@ -11,11 +11,10 @@ namespace ServerManager
 {
     public class ClientThreadManager
     {
-        TcpClient Client;
-        Thread Listener;
-        NetworkStream Stream;
-        byte[] dataBuffer;
-        byte[] data;
+        private TcpClient Client;
+        private Thread Listener;
+        private NetworkStream Stream;
+
         public ClientThreadManager(TcpClient Client)
         {
             this.Client = Client;
@@ -27,6 +26,8 @@ namespace ServerManager
             Console.WriteLine("shit happened");
             try
             {
+                byte[] dataBuffer;
+                byte[] data;
                 while (Client.Connected)
                 {
                     try
@@ -36,12 +37,18 @@ namespace ServerManager
                         Stream.Read(dataBuffer, 0, dataBuffer.Length);
                         data = new byte[BitConverter.ToInt32(dataBuffer, 0)];
                         for (int i = 0; i < data.Length; i++)
-                            data[i] = dataBuffer[i+4];
+                            data[i] = dataBuffer[i + 4];
                         Console.WriteLine(System.Text.Encoding.ASCII.GetString(data));
                         Console.WriteLine("thing happened");
                     }
+<<<<<<< HEAD
                     catch (Exception e){
                         Console.WriteLine("Fucked up. " + e.Message);
+=======
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("fucked up " + e.Message);
+>>>>>>> ClientConnection
                     }
                 }
             }

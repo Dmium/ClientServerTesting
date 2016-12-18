@@ -3,3 +3,8 @@ C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\Server\bin\D
 C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\Server\bin\Debug\ServerManager.pdb
 C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\Server\obj\Debug\ServerManager.dll
 C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\Server\obj\Debug\ServerManager.pdb
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\Server\bin\Debug\ServerManager.dll
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\Server\bin\Debug\ServerManager.pdb
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\Server\obj\Debug\ServerManager.csprojResolveAssemblyReference.cache
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\Server\obj\Debug\ServerManager.dll
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\Server\obj\Debug\ServerManager.pdb

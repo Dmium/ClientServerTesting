@@ -41,14 +41,9 @@ namespace ServerManager
                         Console.WriteLine(System.Text.Encoding.ASCII.GetString(data));
                         Console.WriteLine("thing happened");
                     }
-<<<<<<< HEAD
-                    catch (Exception e){
-                        Console.WriteLine("Fucked up. " + e.Message);
-=======
                     catch (Exception e)
                     {
-                        Console.WriteLine("fucked up " + e.Message);
->>>>>>> ClientConnection
+                        Console.WriteLine("Fucked up. " + e.Message);
                     }
                 }
             }

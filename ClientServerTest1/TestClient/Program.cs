@@ -19,6 +19,8 @@ namespace TestClient
             Console.ReadLine();
             client = new Client("127.0.0.1", 25566);
             receiver.Start();
+            Console.Write("Enter a name: ");
+            client.Write(new ConnectionData(Console.ReadLine()));
             Message messageToSend;
             while (true)
             {
@@ -29,6 +31,8 @@ namespace TestClient
         public static void ReceiveThread()
         {
             while (true)
+            {
+                System.Threading.Thread.Sleep(2);
                 while (client.CanRead)
                 {
                     object obj;
@@ -36,6 +40,7 @@ namespace TestClient
                         if (obj.GetType() == typeof(Message))
                             Console.WriteLine(((Message)obj).MessageContent);
                 }
+            }
         }
     }
 }

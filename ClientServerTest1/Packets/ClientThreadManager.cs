@@ -15,10 +15,10 @@ namespace Packets
     {
         private TcpClient Client;
         private Thread Listener;
-        private NetworkStream Stream;
         public ConcurrentQueue<DecodedPacket> Packets = new ConcurrentQueue<DecodedPacket>();
         public int ClientID { get; }
         public bool CanRead { get { return !Packets.IsEmpty; } }
+        public bool Connected { get { return Client.Connected; } }
         public ClientThreadManager(TcpClient Client, int ClientID)
         {
             this.Client = Client;
@@ -61,8 +61,11 @@ namespace Packets
         }
         public void SendObject(object obj)
         {
-            byte[] byteToSend = PacketMethods.ObjectToPacket(obj);
-            Client.GetStream().WriteAsync(byteToSend,0, byteToSend.Length);//I probably shouldn't have this running at the same time as the receiver but w/e it will probably maybe work
+            if (Client.Connected)
+            {
+                byte[] byteToSend = PacketMethods.ObjectToPacket(obj);
+                Client.GetStream().WriteAsync(byteToSend, 0, byteToSend.Length);//I probably shouldn't have this running at the same time as the receiver but w/e it will probably maybe work
+            }
         }
     }
 }

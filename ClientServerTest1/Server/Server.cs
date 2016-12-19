@@ -39,11 +39,19 @@ namespace ServerManager
                 }
                 for (int i = 0; i < Managers.Count; i++)
                 {
-                    while (!Managers[i].Packets.IsEmpty)
+                    if (Managers[i].Connected)
                     {
-                        //Yeah this is bad. If TryDequeue consistantly fails then the entire server crashes :/
-                        if (Managers[i].Packets.TryDequeue(out cPacket))
-                            ReceivedPackets.Enqueue(cPacket);
+                        while (!Managers[i].Packets.IsEmpty)
+                        {
+                            //Yeah this is bad. If TryDequeue consistantly fails then the entire server crashes :/
+                            if (Managers[i].Packets.TryDequeue(out cPacket))
+                                ReceivedPackets.Enqueue(cPacket);
+                        }
+                    }
+                    else
+                    {
+                        Managers.RemoveAt(i);
+                        i--;
                     }
                 }
             }

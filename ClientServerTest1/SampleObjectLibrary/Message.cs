@@ -9,6 +9,7 @@ namespace SampleObjectLibrary
     [Serializable]
     public class Message
     {
+        public string ClientName { get; set; }
         public string MessageContent { get; set; }
         public Message(string MessageContent)
         {

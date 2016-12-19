@@ -13,19 +13,46 @@ namespace ClientServerTest1
     {
         static void Main(string[] args)
         {
+            Dictionary<int, Client> clients = new Dictionary<int, Client>();
             Server server = new Server();
             server.Start();
             int ClientID;
             object obj;
             while (true)
+            {
+                System.Threading.Thread.Sleep(2);
                 while (server.CanRead)
                 {
                     if (server.GetPacket(out ClientID, out obj))
                     {
-                        Console.WriteLine(ClientID + ": " + ((Message)obj).MessageContent);
-                        server.Broadcast(((Message)obj));
+                        if (obj == null)
+                        {
+
+                        }
+                        else if (obj.GetType() == typeof(ConnectionData))
+                        {
+                            Console.WriteLine(((ConnectionData)obj).ClientName + " connected.");
+                            clients.Add(ClientID, new Client(ClientID, ((ConnectionData)obj).ClientName));
+                        }
+                        else if (obj.GetType() == typeof(Message))
+                        {
+                            Console.WriteLine(clients[ClientID].Name + ": " + ((Message)obj).MessageContent);
+                            server.Broadcast(new Message(clients[ClientID].Name + ": " + ((Message)obj).MessageContent));
+                            break;
+                        }
                     }
                 }
+            }
+        }
+    }
+    class Client
+    {
+        public int ID { get; }
+        public string Name { get; }
+        public Client(int ID, string Name)
+        {
+            this.ID = ID;
+            this.Name = Name;
         }
     }
 }

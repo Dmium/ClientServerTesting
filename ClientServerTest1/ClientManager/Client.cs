@@ -6,51 +6,33 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
+using Packets;
 
 namespace ClientManager
 {
     public class Client
     {
-        TcpClient Con;
-        Thread Listener;
-        NetworkStream Stream;
-        byte[] data;
-        byte[] tempData;
-        string stringToSend;
+        private ClientThreadManager clm;
+        public bool CanRead { get { return clm.CanRead; } }
         public Client(String ip, int port)
         {
-            this.Con = new TcpClient();
-            Listener = new Thread(new ThreadStart(ClientListener));
-            Listener.Start();
+            clm = new ClientThreadManager(ip, port);
         }
-        public void ClientListener()
+        public bool Read(out object obj)
         {
-            try
-            {
-                Con.Connect(IPAddress.Parse("127.0.0.1"), 25566);
-                while (Con.Connected)
+            DecodedPacket dp;
+            if (!clm.Packets.IsEmpty)
+                if (clm.Packets.TryDequeue(out dp))
                 {
-                    try
-                    {
-                        stringToSend = Console.ReadLine();
-                        tempData = System.Text.Encoding.ASCII.GetBytes(stringToSend);
-                        data = new byte[tempData.Length + 4];
-                        for (int i = 0; i < 4; i++)
-                            data[i] = BitConverter.GetBytes(tempData.Length)[i];
-                        for (int i = 0; i < tempData.Length; i++)
-                            data[i + 4] = tempData[i];
-                        Stream = Con.GetStream();
-                        Stream.Write(data, 0, data.Length);
-                        Stream.Flush();
-                        Console.WriteLine("Sent (probably)");
-                    }
-                    catch (Exception e)
-                    {
-                        Console.WriteLine("Fucked up. " + e.Message);
-                    }
+                    obj = dp.obj;
+                    return true;
                 }
-            }
-            catch { }
+            obj = null;
+            return false;
+        }
+        public void Write(object obj)
+        {
+            clm.SendObject(obj);
         }
     }
 }

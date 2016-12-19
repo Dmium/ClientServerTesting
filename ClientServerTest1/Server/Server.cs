@@ -33,7 +33,7 @@ namespace ServerManager
             ConnectionListener.Start();
             while (true)
             {
-                while (!ConnectionListener.Pending())
+                while (ConnectionListener.Pending())
                 {
                     Managers.Add(new ClientThreadManager(ConnectionListener.AcceptTcpClient(), Managers.Count));
                 }
@@ -53,14 +53,24 @@ namespace ServerManager
         /// </summary>
         /// <param name="dp"></param>
         /// <returns></returns>
-        public bool GetPacket(out DecodedPacket dp)
+        public bool GetPacket(out int ClientID, out object obj)
         {
+            DecodedPacket dp;
             if (CanRead)
                 if (ReceivedPackets.TryDequeue(out dp))
+                {
+                    ClientID = dp.ClientID;
+                    obj = dp.obj;
                     return true;
-            dp = null;
+                }
+            ClientID = 0;
+            obj = null;
             return false;
         }
-        //TODO add send methods (broadcast as well as client specific)
+        public void Broadcast(object obj)
+        {
+            foreach (ClientThreadManager manager in Managers)
+                manager.SendObject(obj);
+        }
     }
 }

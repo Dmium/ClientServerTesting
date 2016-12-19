@@ -15,3 +15,7 @@ C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTe
 C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\bin\Debug\ServerManager.dll
 C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\bin\Debug\ServerManager.pdb
 C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\obj\Debug\ClientServerTest1.csprojResolveAssemblyReference.cache
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\bin\Debug\SampleObjectLibrary.dll
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\bin\Debug\Packets.dll
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\bin\Debug\SampleObjectLibrary.pdb
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientServerTest1\bin\Debug\Packets.pdb

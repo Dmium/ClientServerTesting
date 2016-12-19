@@ -54,6 +54,10 @@
       <Project>{d3869cf3-7241-46ba-9b41-9c7e066407f4}</Project>
       <Name>ClientManager</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SampleObjectLibrary\SampleObjectLibrary.csproj">
+      <Project>{faeaf8f2-c6e0-4433-854f-c4bb377b8047}</Project>
+      <Name>SampleObjectLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

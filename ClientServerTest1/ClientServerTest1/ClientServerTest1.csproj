@@ -50,6 +50,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SampleObjectLibrary\SampleObjectLibrary.csproj">
+      <Project>{faeaf8f2-c6e0-4433-854f-c4bb377b8047}</Project>
+      <Name>SampleObjectLibrary</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Server\ServerManager.csproj">
       <Project>{4243e32b-1df1-4d26-91f4-d76849a8a645}</Project>
       <Name>ServerManager</Name>

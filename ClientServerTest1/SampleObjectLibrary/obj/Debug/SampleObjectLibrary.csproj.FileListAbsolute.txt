@@ -1,0 +1,5 @@
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\SampleObjectLibrary\bin\Debug\SampleObjectLibrary.dll
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\SampleObjectLibrary\bin\Debug\SampleObjectLibrary.pdb
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\SampleObjectLibrary\obj\Debug\SampleObjectLibrary.csprojResolveAssemblyReference.cache
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\SampleObjectLibrary\obj\Debug\SampleObjectLibrary.dll
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\SampleObjectLibrary\obj\Debug\SampleObjectLibrary.pdb

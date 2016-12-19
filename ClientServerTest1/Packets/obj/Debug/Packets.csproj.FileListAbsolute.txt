@@ -1,0 +1,5 @@
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\Packets\bin\Debug\Packets.dll
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\Packets\bin\Debug\Packets.pdb
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\Packets\obj\Debug\Packets.csprojResolveAssemblyReference.cache
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\Packets\obj\Debug\Packets.dll
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\Packets\obj\Debug\Packets.pdb

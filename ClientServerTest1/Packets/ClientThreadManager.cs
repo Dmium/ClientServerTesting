@@ -9,7 +9,7 @@ using System.Threading;
 using Packets;
 using System.Collections.Concurrent;
 
-namespace ServerManager
+namespace Packets
 {
     public class ClientThreadManager
     {
@@ -18,10 +18,24 @@ namespace ServerManager
         private NetworkStream Stream;
         public ConcurrentQueue<DecodedPacket> Packets = new ConcurrentQueue<DecodedPacket>();
         public int ClientID { get; }
+        public bool CanRead { get { return !Packets.IsEmpty; } }
         public ClientThreadManager(TcpClient Client, int ClientID)
         {
             this.Client = Client;
             this.ClientID = ClientID;
+            Listener = new Thread(new ThreadStart(ClientListener));
+            Listener.Start();
+        }
+        /// <summary>
+        /// Only for use by clients. This will mess up servers
+        /// </summary>
+        /// <param name="ip"></param>
+        /// <param name="port"></param>
+        public ClientThreadManager(string ip, int port)
+        {
+            this.Client = new TcpClient();
+            this.Client.Connect(new IPEndPoint(IPAddress.Parse(ip), port));
+            this.ClientID = 0;
             Listener = new Thread(new ThreadStart(ClientListener));
             Listener.Start();
         }
@@ -34,7 +48,8 @@ namespace ServerManager
                 {
                     try
                     {
-                        Packets.Enqueue(PacketMethods.PacketToDecodedPacket(Client.GetStream(), ClientID));
+                        if (Client.GetStream().CanRead)
+                            Packets.Enqueue(PacketMethods.PacketToDecodedPacket(Client.GetStream(), ClientID));
                     }
                     catch (Exception e)
                     {
@@ -43,6 +58,11 @@ namespace ServerManager
                 }
             }
             catch { }
+        }
+        public void SendObject(object obj)
+        {
+            byte[] byteToSend = PacketMethods.ObjectToPacket(obj);
+            Client.GetStream().WriteAsync(byteToSend,0, byteToSend.Length);//I probably shouldn't have this running at the same time as the receiver but w/e it will probably maybe work
         }
     }
 }

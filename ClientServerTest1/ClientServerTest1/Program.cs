@@ -6,6 +6,7 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using ServerManager;
+using SampleObjectLibrary;
 namespace ClientServerTest1
 {
     class Program
@@ -14,7 +15,17 @@ namespace ClientServerTest1
         {
             Server server = new Server();
             server.Start();
-            Console.ReadLine();
+            int ClientID;
+            object obj;
+            while (true)
+                while (server.CanRead)
+                {
+                    if (server.GetPacket(out ClientID, out obj))
+                    {
+                        Console.WriteLine(ClientID + ": " + ((Message)obj).MessageContent);
+                        server.Broadcast(((Message)obj));
+                    }
+                }
         }
     }
 }

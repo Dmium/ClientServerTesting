@@ -3,3 +3,10 @@ C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\ClientManage
 C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\ClientManager\obj\Debug\ClientManager.csprojResolveAssemblyReference.cache
 C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\ClientManager\obj\Debug\ClientManager.dll
 C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\ClientManager\obj\Debug\ClientManager.pdb
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientManager\bin\Debug\ClientManager.dll
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientManager\bin\Debug\ClientManager.pdb
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientManager\bin\Debug\Packets.dll
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientManager\bin\Debug\Packets.pdb
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientManager\obj\Debug\ClientManager.csprojResolveAssemblyReference.cache
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientManager\obj\Debug\ClientManager.dll
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\ClientManager\obj\Debug\ClientManager.pdb

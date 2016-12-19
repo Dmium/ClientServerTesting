@@ -9,3 +9,12 @@ C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\TestClient\o
 C:\Users\Dm2oo56\Git projects\ClientServerTesting\ClientServerTest1\TestClient\obj\Debug\TestClient.pdb
 C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\TestClient\obj\Debug\TestClient.exe
 C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\TestClient\obj\Debug\TestClient.pdb
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\TestClient\bin\Debug\TestClient.exe
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\TestClient\bin\Debug\TestClient.pdb
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\TestClient\bin\Debug\ClientManager.dll
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\TestClient\bin\Debug\SampleObjectLibrary.dll
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\TestClient\bin\Debug\Packets.dll
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\TestClient\bin\Debug\ClientManager.pdb
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\TestClient\bin\Debug\SampleObjectLibrary.pdb
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\TestClient\bin\Debug\Packets.pdb
+C:\Users\dm2oo\Git projects\ClientServerTesting\ClientServerTest1\TestClient\obj\Debug\TestClient.csprojResolveAssemblyReference.cache

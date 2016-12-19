@@ -11,36 +11,44 @@ namespace ClientServerTest1
 {
     class Program
     {
+        static Dictionary<int, Client> clients = new Dictionary<int, Client>();
+        static Server server = new Server();
+        static int ClientID;
+        static object obj;
         static void Main(string[] args)
         {
-            Dictionary<int, Client> clients = new Dictionary<int, Client>();
-            Server server = new Server();
             server.Start();
-            int ClientID;
-            object obj;
             while (true)
             {
                 System.Threading.Thread.Sleep(2);
                 while (server.CanRead)
                 {
-                    if (server.GetPacket(out ClientID, out obj))
-                    {
-                        if (obj == null)
-                        {
+                    TranslatePacket();
+                }
+            }
+        }
+        /// <summary>
+        /// Only made this method to help with Garbage collection. Not sure if I made the problem better or worse.
+        /// </summary>
+        private static void TranslatePacket()
+        {
+            if (server.GetPacket(out ClientID, out obj))
+            {
+                if (obj == null)
+                {
 
-                        }
-                        else if (obj.GetType() == typeof(ConnectionData))
-                        {
-                            Console.WriteLine(((ConnectionData)obj).ClientName + " connected.");
-                            clients.Add(ClientID, new Client(ClientID, ((ConnectionData)obj).ClientName));
-                        }
-                        else if (obj.GetType() == typeof(Message))
-                        {
-                            Console.WriteLine(clients[ClientID].Name + ": " + ((Message)obj).MessageContent);
-                            server.Broadcast(new Message(clients[ClientID].Name + ": " + ((Message)obj).MessageContent));
-                            break;
-                        }
-                    }
+                }
+                else if (obj.GetType() == typeof(ConnectionData))
+                {
+                    Console.WriteLine(((ConnectionData)obj).ClientName + " connected.");
+                    if (clients.ContainsKey(ClientID))
+                        clients.Remove(ClientID);
+                    clients.Add(ClientID, new Client(ClientID, ((ConnectionData)obj).ClientName));
+                }
+                else if (obj.GetType() == typeof(Message))
+                {
+                    Console.WriteLine(clients[ClientID].Name + ": " + ((Message)obj).MessageContent);
+                    server.Broadcast(new Message(clients[ClientID].Name + ": " + ((Message)obj).MessageContent));
                 }
             }
         }

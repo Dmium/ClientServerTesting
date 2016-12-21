@@ -41,7 +41,6 @@ namespace Packets
         }
         public void ClientListener()
         {
-            Console.WriteLine("shit happened");
             try
             {
                 while (Client.Connected)
@@ -57,7 +56,10 @@ namespace Packets
                     }
                 }
             }
-            catch { }
+            catch(Exception e)
+            {
+                Console.WriteLine("Fucked up harder. " + e.Message);
+            }
         }
         public void SendObject(object obj)
         {
